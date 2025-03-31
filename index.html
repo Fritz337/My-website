@@ -4,8 +4,8 @@
     <title>Мой сайт</title>
 </head>
 <body>
-    <h1>Привет, мир!</h1>
-    <p>Это мой первый сайт.</p>
+    <h1> Hello</h1>
+    <p>Имба Сайт.</p>
 </body>
 </html>
 <!DOCTYPE html>
@@ -42,7 +42,376 @@
     <!-- Картинка -->
     <img src="https://images.app.goo.gl/26nJ19UGeZHs12ce9" alt="Сейшеро Наги">
     
-<input type="text" placeholder="Введите имя">
+<input type="text" placeholder="Ия или жок">
 <button>Отправить</button> 
 
-<img src="#3b0000 alt="Моё фото">
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #007bff, #00c6ff);
+            color: white;
+            padding: 50px 20px;
+            font-size: 28px;
+            font-weight: bold;
+            text-transform: uppercase;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin-top: -60px;
+            object-fit: cover;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        Нурхат Блю Лок ойнайснба
+    </div>
+
+    <div class="content">
+        <img src="profile.jpg" alt="Фото профиля" class="profile-pic">
+        <h2>Не выпал Кайзер Лох!</h2>
+        <p>Асхаттын Имба сайт.</p>
+        <a href="#" class="btn">Подробнее</a>
+    </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анимированная форма</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #007bff, #00c6ff);
+        }
+
+        .form-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeIn 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 2px solid #007bff;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #0056b3;
+            transform: scale(1.05);
+        }
+
+        button:active {
+            animation: sendUp 0.5s forwards;
+        }
+
+        @keyframes sendUp {
+            to {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Оставьте сообщение</h2>
+        <input type="text" id="message" placeholder="Введите сообщение...">
+        <button onclick="sendMessage()">Отправить</button>
+    </div>
+
+    <script>
+        function sendMessage() {
+            let msg = document.getElementById("message").value;
+            alert("Сообщение отправлено: " + msg);
+        }
+    </script>
+
+</body>
+</html>
+>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма с аватаркой</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #007bff, #00c6ff);
+        }
+
+        .form-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 300px;
+        }
+
+        .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            border: 3px solid #007bff;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 2px solid #007bff;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #0056b3;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <img src="avatar.jpg" class="avatar" alt="Аватар">
+        <h2>Ваше имя</h2>
+        <input type="text" placeholder="Введите имя">
+        <button>Сохранить</button>
+    </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Открыть Roblox</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #121212;
+            color: white;
+            font-family: Arial, sans-serif;
+            flex-direction: column;
+        }
+
+        button {
+            padding: 15px 25px;
+            font-size: 18px;
+            background: #00a2ff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #0083cc;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Блюлок ойнагын келсе Бас</h2>
+    <button onclick="openRoblox()">Открыть Roblox</button>
+
+    <script>
+        function openRoblox() {
+            window.location.href = "roblox://";
+        }
+    </script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авто-изменение фона</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #121212;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Фон будет меняться автоматически</h2>
+
+    <script>
+        function changeBackground() {
+            const colors = ["#ff4757", "#2ed573", "#1e90ff", "#ff9f1a", "#7d5fff", "#121212"];
+            document.body.style.background = colors[Math.floor(Math.random() * colors.length)];
+        }
+
+        setInterval(changeBackground, 3000); // Меняет фон каждые 3 секунды
+    </script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фон с твоими фото</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-shadow: 2px 2px 5px black;
+            transition: background-image 1s ease-in-out;  
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        const images = [
+            "photo1.jpg",  // Замени на своё фото
+            "photo2.jpg",  
+            "photo3.jpg"
+        ];
+
+        function changeBackground() {
+            const randomImage = images[Math.floor(Math.random() * images.length)];
+            document.body.style.backgroundImage = `url(${randomImage})`;
+        }
+
+        setInterval(changeBackground, 3000);
+    </script>
+
+</body>
+</html>
